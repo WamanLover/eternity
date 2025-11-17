@@ -1,0 +1,237 @@
+*{
+    margin: 0px;
+    font-size: 20px;
+    font-family: "Montserrat", sans-serif;
+}
+a{
+    color: black;
+    text-decoration: none;
+
+}
+/*Navigation Bar*/
+nav{
+    position: fixed;
+    top: 0px;
+    display: block;
+    text-align: center;
+    padding-top: 20px;
+    width: 100%;
+    background-color: white;
+    box-shadow: 0.5px 0.5px 10px gray;
+    z-index: 1;
+}
+#nav_title {
+    font-weight: bold;
+    font-size: 50px;
+}
+#nav_links {
+    margin-top: 10px;
+    display: flex;
+    justify-content: space-between;
+    height: 48px;
+    width: 100%;
+}
+#nav_links a{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    width: 100%;
+    font-size: 18px;
+}
+#nav_links a:hover{
+    color: goldenrod;
+}
+
+/*Banner*/
+.banner_rotator{
+    position: relative;
+    margin-top: 125px;
+    width: 100%;
+    height: 500px;
+    z-index: -1;
+}
+.banner{
+    position: absolute;
+    object-fit: cover;
+    height: 100%;
+    width: 100%;
+    display: block;
+    opacity: 0;
+    animation: fade 25s infinite;
+}
+ 
+.banner_rotator img:nth-child(1) {
+  animation-delay: 0s;
+}
+
+.banner_rotator img:nth-child(2) {
+  animation-delay: 5s;
+}
+
+.banner_rotator img:nth-child(3) {
+  animation-delay: 10s;
+}
+
+.banner_rotator img:nth-child(4) {
+  animation-delay: 15s;
+}
+
+.banner_rotator img:nth-child(5) {
+  animation-delay: 20s;
+}
+@keyframes fade {
+  0%   { opacity: 0; }   /* start hidden */
+  8%   { opacity: 1; }   /* fade-in ends */
+  20%  { opacity: 1; }   /* stay visible */
+  28%  { opacity: 0; }   /* fade-out ends */
+  100% { opacity: 0; }   /* remain hidden until next loop */
+}
+
+/*Intro*/
+#intro{
+    text-align: center;
+    background-color:rgb(240, 240, 240);
+    padding: 40px 200px;
+}
+#intro h3{
+    font-size: 25px;
+    margin-bottom: 10px;
+    font-family: "Birthstone Bounce", cursive;
+    font-weight: 500;
+}
+#intro h1{
+    font-size: 50px;
+    color: goldenrod;
+    margin-bottom: 10px;
+    font-family: "Italianno", cursive;
+    font-weight: normal;
+}
+#intro p {
+    font-size: 15px;
+}
+
+/*Brand and Planner*/
+.segment{
+    display: flex;
+    justify-content: space-between;
+    margin: 40px 60px;
+}
+.segment_img{
+    width: 45%;
+}
+.segment_content{
+    width: 48%;
+    text-align: center;
+}
+.segment_content h1{
+    font-family: "Italianno", cursive;
+    font-size: 53px;
+    font-weight: 400;
+    margin-bottom: 15px;
+}
+.segment_content p{
+    font-size: 15px;
+    margin-bottom: 30px;
+}
+
+/*Slideshow*/
+#slideshow{
+    background-color: rgb(240, 240, 240);
+    padding: 50px;
+    display: flex;
+    justify-content: space-between;
+    z-index: -1;
+}
+#slideshow img{
+    height: 350px;
+    width: 260px;
+    filter: grayscale();
+}
+#slideshow img:hover{
+    filter:none;
+}
+
+/*Bottom Banner*/
+#bottom_banner{
+    object-fit: cover;
+    width: 100%;
+    height: 400px;
+    object-position: 0px -290px;
+    display: block;
+}
+
+/*Footer*/
+footer{
+    position: relative;
+    background-color: black;
+    color: white;
+    height: 700px;
+    width: 100%;
+    z-index: 2;
+}
+#footer_div{
+    height: 48%;
+    padding: 40px 40px 0px 40px;
+}
+.footer1{
+    display: flex;
+    justify-content:space-between;
+}
+.footer1 *{
+    color: white;
+    font-size: 20px;
+    padding-bottom: 20px;
+}
+.footer1 a:hover{
+    text-decoration: underline;
+}
+.footer1 h1:first-child{
+    font-size: 50px;
+    padding-top: 20px;
+    padding-bottom: 0px;
+}
+.footer1 h1:last-child{
+    font-size: 30px;
+    font-weight: normal;
+    padding-bottom: 0px;
+}
+.footer_heading3{
+    font-weight: bold;
+    font-size: 25px;
+}
+.footer_items{
+    display: flex;
+    flex-direction: column;
+}
+#footer2{
+    display: flex;
+    justify-content: space-between;
+    border-top: 1px solid white;
+    padding: 20px 0px;
+}
+#footer3{
+    border-top: 1px solid white;
+    padding-top: 20px;
+    text-align: center;
+    font-size: 20px;
+}
+.fa {
+  width: 50px;
+  text-align: center;
+  text-decoration: none;
+  border-radius: 25%;
+  background: white;
+  color: black;
+  padding: 17px 0px;
+}
+#footer_img{
+    position: absolute;
+    bottom: 20px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 700px;
+    height: 325px;
+    object-fit: cover;
+    object-position: 0px -130px;
+    z-index: -1;
+}
